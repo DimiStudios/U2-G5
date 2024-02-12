@@ -34,8 +34,12 @@ public class Main {
     <script>
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println(Este es un compilador empírico)")) {
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Este es un compilador empírico")) {
                 var output = "Este es un compilador empírico 🤑."; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Hello World")) {
+                var output = "Hello World"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
