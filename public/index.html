@@ -25,11 +25,7 @@
     <script>
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 1") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 1 es: 1"; // Aquí deberías ejecutar la lógica del programa Java
-                document.getElementById("outputData").innerHTML = output;
-            }
-            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 2 es: 2"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
