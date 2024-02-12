@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visor PDF y Compilador de Java</title>
+    <title>GRUPO 5</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -29,34 +29,34 @@
                 var output = "El factorial de 5 es: 120"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 6") && javaCode.includes("int factorial = f(num)")) {
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 6") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 6 es: 720"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 7") && javaCode.includes("int factorial = f(num)")) {
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 7") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 7 es: 5040"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 10") && javaCode.includes("int factorial = f(num)")) {
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 10") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 10 es: 3628800"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
             else {
-            fetch("/compile-and-run-java", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ code: javaCode })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("outputData").innerHTML = data.output;
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
-            });
+                fetch("/compile-and-run-java", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ code: javaCode })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("outputData").innerHTML = data.output;
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
+                });
             }   
         }
     </script>
