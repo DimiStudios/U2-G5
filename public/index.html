@@ -34,7 +34,7 @@ public class Main {
     <script>
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println(Este es un compilador empírico 🤑.)")) {
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println")) {
                 var output = "Este es un compilador empírico 🤑."; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
