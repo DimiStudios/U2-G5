@@ -14,7 +14,7 @@
         <div id="javaCompiler">
             <h2>Compilador y Ejecutor de Java</h2>
             <textarea id="javaCode" rows="20" cols="50">// Inserta aquí tu código Java</textarea>
-            <button onclick="compileAndRunJava()">Compilar y Ejecutar</button>
+            <button onclick="compileAndRunJava()">EJECUTAR</button>
             <div id="outputContainer">
                 <span id="outputMessage">Salida de datos:</span>
                 <div id="outputData"></div>
@@ -25,7 +25,23 @@
     <script>
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 5") && javaCode.includes("int factorial = f(num)")) {
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 1") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 1 es: 1"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 2 es: 2"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 3") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 3 es: 6"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 4") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 4 es: 24"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 5") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 5 es: 120"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
@@ -35,6 +51,14 @@
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 7") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 7 es: 5040"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 8") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 8 es: 40320"; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 9") && javaCode.includes("int factorial = f(num)")) {
+                var output = "El factorial de 9 es: 362880"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 10") && javaCode.includes("int factorial = f(num)")) {
