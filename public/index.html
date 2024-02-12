@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor PDF y Compilador de Java</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="pdfViewer">
+            <iframe src="tu_archivo.pdf" width="100%" height="100%"></iframe>
+        </div>
+        <div id="javaCompiler">
+            <h2>Compilador y Ejecutor de Java</h2>
+            <textarea id="javaCode" rows="20" cols="50">// Inserta aquí tu código Java</textarea>
+            <button onclick="compileAndRunJava()">Compilar y Ejecutar</button>
+            <div id="outputContainer">
+                <span id="outputMessage">Salida de datos:</span>
+                <div id="outputData"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function compileAndRunJava() {
+            var javaCode = document.getElementById("javaCode").value;
+            fetch("/compile-and-run-java", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ code: javaCode })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("outputData").innerHTML = data.output;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
+            });
+        }
+    </script>
+</body>
+</html>
