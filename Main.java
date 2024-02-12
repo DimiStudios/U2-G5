@@ -1,6 +1,6 @@
 public class Main{
     public static void main(String[] args) {
-        int num = 6; // Puedes cambiar el número aquí para calcular su factorial
+        int num = 5; // Puedes cambiar el número aquí para calcular su factorial
         int factorial = f(num);
         System.out.println("El factorial de " + num + " es: " + factorial);
     }
