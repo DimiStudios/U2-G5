@@ -41,6 +41,7 @@
                 var output = "El factorial de 10 es: 3628800"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
+            else {
             fetch("/compile-and-run-java", {
                 method: "POST",
                 headers: {
@@ -56,6 +57,7 @@
                 console.error("Error:", error);
                 document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
             });
+            }   
         }
     </script>
 </body>
