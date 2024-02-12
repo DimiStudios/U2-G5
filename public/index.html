@@ -38,7 +38,7 @@ public class Main {
                 var output = "Este es un compilador empírico 🤑."; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Hello World")) {
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Hello World")) {
                 var output = "Hello World"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
