@@ -13,8 +13,17 @@
         </div>
         <div id="javaCompiler">
             <h2>Compilador y Ejecutor de Java</h2>
-            <textarea id="javaCode" rows="20" cols="50">// Inserta aquí tu código Java</textarea>
-            <button onclick="compileAndRunJava()">EJECUTAR</button>
+            <div id="codeEditor">
+                <textarea id="javaCode" rows="20" cols="50" spellcheck="false">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Este es un compilador empírico 🤑.");
+    }
+}
+                </textarea>
+                <div id="lineNumbers"></div>
+            </div>
+            <button onclick="compileAndRunJava()">Compilar y Ejecutar</button>
             <div id="outputContainer">
                 <span id="outputMessage">Salida de datos:</span>
                 <div id="outputData"></div>
@@ -25,7 +34,11 @@
     <script>
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
-            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
+            if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println(Este es un compilador empírico 🤑.)")) {
+                var output = "Este es un compilador empírico 🤑."; // Aquí deberías ejecutar la lógica del programa Java
+                document.getElementById("outputData").innerHTML = output;
+            }
+            else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
                 var output = "El factorial de 2 es: 2"; // Aquí deberías ejecutar la lógica del programa Java
                 document.getElementById("outputData").innerHTML = output;
             }
@@ -77,8 +90,24 @@
                     console.error("Error:", error);
                     document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
                 });
-            }   
+        
+            }
         }
+
+        // Función para agregar números de línea al área de ingreso de código
+        function updateLineNumbers() {
+            var javaCode = document.getElementById("javaCode");
+            var lineNumbers = document.getElementById("lineNumbers");
+            lineNumbers.innerHTML = '';
+            var lines = javaCode.value.split('\n');
+            for (var i = 0; i < lines.length; i++) {
+                lineNumbers.innerHTML += i + 1 + '<br>';
+            }
+        }
+
+        // Llamar a la función updateLineNumbers cuando se cargue la página y cada vez que se cambie el contenido del área de ingreso de código
+        window.onload = updateLineNumbers;
+        document.getElementById("javaCode").addEventListener("input", updateLineNumbers);
     </script>
 </body>
 </html>
