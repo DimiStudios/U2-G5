@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB3 | MOD4</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="img/logito_redondo.png" type="image">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text">CONTACTANOS</h1>
+        <button class="button" onclick="redirectToWhatsApp('+51952704345')">Diana Barrantes</button>
+        <button class="button" onclick="redirectToWhatsApp('+51965146199')">Alejandra Rojas</button>
+        <button class="button" onclick="redirectToWhatsApp('+51921602229')">Alejandro Pita</button>
+    </div>
+    <script>
+        function redirectToWhatsApp(phoneNumber) {
+            window.location.href = 'https://wa.me/' + phoneNumber;
+        }
+    </script>
+    
+</body>
+</html>
