@@ -9,7 +9,15 @@
 <body>
     <div class="container">
         <div id="pdfViewer">
-            <iframe src="GUIA_IIU.pdf" width="100%" height="100%"></iframe>
+            <div id="pdfButtons">
+                <button onclick="changePDF('GUIA_EJERCICIOS.pdf')">UNIDAD 1</button>
+                <button onclick="changePDF('GUIA_IIU.pdf')">UNIDAD 2</button>
+                <button onclick="changePDF('NOENCONTRADO.pdf')">UNIDAD 3</button>
+                <button onclick="changePDF('NOENCONTRADO.pdf')">GUIA COMPLETA</button>
+                <a href="otra_pagina.html"><button>CONTACTANOS</button></a>
+
+            </div>
+            <iframe id="pdfFrame" src="GUIA_EJERCICIOS.pdf" width="100%" height="100%"></iframe>
         </div>
         <div id="javaCompiler">
             <h2>Compilador y Ejecutor de Java</h2>
@@ -94,11 +102,9 @@ public class Main {
                     console.error("Error:", error);
                     document.getElementById("outputData").innerHTML = "Error al compilar y ejecutar el código Java.";
                 });
-        
             }
         }
 
-        // Función para agregar números de línea al área de ingreso de código
         function updateLineNumbers() {
             var javaCode = document.getElementById("javaCode");
             var lineNumbers = document.getElementById("lineNumbers");
@@ -109,9 +115,12 @@ public class Main {
             }
         }
 
-        // Llamar a la función updateLineNumbers cuando se cargue la página y cada vez que se cambie el contenido del área de ingreso de código
         window.onload = updateLineNumbers;
         document.getElementById("javaCode").addEventListener("input", updateLineNumbers);
+
+        function changePDF(pdfUrl) {
+            document.getElementById("pdfFrame").src = pdfUrl;
+        }
     </script>
 </body>
 </html>

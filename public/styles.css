@@ -7,12 +7,14 @@ body {
 
 .container {
     display: flex;
+    justify-content: space-between; /* Alinea los elementos en los extremos */
 }
 
 #pdfViewer {
     width: 50%;
     height: 100vh;
-    background-color: #024272; /* Azul */
+    background-color: #011725 ; /* Azul */
+    position: relative;
 }
 
 #javaCompiler {
@@ -63,7 +65,7 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #03518B; /* Azul más claro */
+    background-color: #011725; /* Azul más claro */
     color: #fff; /* Texto blanco */
     border: none;
     border-radius: 5px;
@@ -71,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: #024272; /* Azul oscuro */
+    background-color: #023453; /* Azul oscuro */ 
 }
 
 #outputContainer {
