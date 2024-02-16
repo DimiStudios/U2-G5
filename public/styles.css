@@ -2,18 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #011725; /* Azul oscuro */
+    background-color: #011725; 
 }
 
 .container {
     display: flex;
-    justify-content: space-between; /* Alinea los elementos en los extremos */
+    justify-content: space-between; 
 }
 
 #pdfViewer {
     width: 50%;
     height: 100vh;
-    background-color: #011725 ; /* Azul */
+    background-color: #011725 ; 
     position: relative;
 }
 
@@ -23,13 +23,13 @@ body {
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #011725; /* Azul más claro */
-    color: #fff; /* Texto blanco */
+    background-color: #011725; 
+    color: #fff; 
     position: relative;
 }
 
 #javaCompiler h2 {
-    color: #fff; /* Texto blanco */
+    color: #fff; 
 }
 
 #codeEditor {
@@ -37,16 +37,16 @@ body {
 }
 
 #javaCode {
-    width: calc(100% - 40px); /* Ancho del textarea menos el espacio para los números de línea */
-    padding-left: 40px; /* Espacio para los números de línea */
-    padding-top: 10px; /* Compensación para mantener el texto alineado con los números de línea */
+    width: calc(100% - 40px); 
+    padding-left: 40px; 
+    padding-top: 10px; 
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: vertical;
-    font-family: monospace; /* Para mantener la alineación de los números de línea */
-    color: #011725; /* Azul oscuro */
-    background-color: #fff; /* Blanco */
+    font-family: monospace; 
+    color: #011725; 
+    background-color: #fff; 
 }
 
 #lineNumbers {
@@ -54,10 +54,10 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 30px; /* Ancho para los números de línea */
-    padding-top: 10px; /* Compensación para mantener el texto alineado con los números de línea */
-    background-color: #011725; /* Azul */
-    color: #fff; /* Texto blanco */
+    width: 30px; 
+    padding-top: 10px; 
+    background-color: #011725; 
+    color: #fff; 
     text-align: center;
     border-right: 1px solid #011725;
     border-radius: 5px 0 0 5px;
@@ -65,15 +65,15 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #011725; /* Azul más claro */
-    color: #fff; /* Texto blanco */
+    background-color: #011725; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #023453; /* Azul oscuro */ 
+    background-color: #023453; 
 }
 
 #outputContainer {

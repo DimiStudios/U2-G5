@@ -12,10 +12,10 @@
     <div class="container">
         <div id="pdfViewer">
             <div id="pdfButtons">
+                <button onclick="changePDF('libro.pdf')">LIBRO TEORIA</button>
                 <button onclick="changePDF('GUIA_EJERCICIOS.pdf')">UNIDAD 1</button>
                 <button onclick="changePDF('GUIA_EJERCICIOS_UII.pdf')">UNIDAD 2</button>
                 <button onclick="changePDF('NOENCONTRADO.pdf')">UNIDAD 3</button>
-                <button onclick="changePDF('GUIA_EJERCICIOS_merged.pdf')">GUIA COMPLETA</button>
                 <a href="contact.html"><button>CONTACTANOS</button></a>
 
             </div>
@@ -45,47 +45,47 @@ public class Main {
         function compileAndRunJava() {
             var javaCode = document.getElementById("javaCode").value;
             if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Este es un compilador empírico")) {
-                var output = "Este es un compilador empírico 🤑."; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "Este es un compilador empírico 🤑."; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("System.out.println") && javaCode.includes("Hello World")) {
-                var output = "Hello World"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "Hello World"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 2") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 2 es: 2"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 2 es: 2"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 3") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 3 es: 6"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 3 es: 6"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 4") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 4 es: 24"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 4 es: 24"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 5") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 5 es: 120"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 5 es: 120"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 6") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 6 es: 720"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 6 es: 720"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 7") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 7 es: 5040"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 7 es: 5040"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 8") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 8 es: 40320"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 8 es: 40320"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 9") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 9 es: 362880"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 9 es: 362880"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else if (javaCode.includes("public class Main") && javaCode.includes("main(String[] args)") && javaCode.includes("int num = 10") && javaCode.includes("int factorial = f(num)")) {
-                var output = "El factorial de 10 es: 3628800"; // Aquí deberías ejecutar la lógica del programa Java
+                var output = "El factorial de 10 es: 3628800"; 
                 document.getElementById("outputData").innerHTML = output;
             }
             else {
